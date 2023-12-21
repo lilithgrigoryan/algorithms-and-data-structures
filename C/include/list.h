@@ -29,7 +29,7 @@ list_node_t *list_push_back(list_t *lst, list_node_t *node);
 list_node_t *list_pop_back(list_t *lst);
 
 /**
- * Adds node to the beggining of the list. Returns the node or NULL is node is NULL.
+ * Adds node to the beggining of the list. Returns the node or NULL if node is NULL.
 */
 list_node_t *list_push_front(list_t *lst, list_node_t *node);
 
