@@ -1,6 +1,7 @@
+#include "../../include/list.h"
 
 struct hashMap {
     int numOfElements;
     int capacity;
-    struct node** arr;
+    struct list_node_t** arr;
 };

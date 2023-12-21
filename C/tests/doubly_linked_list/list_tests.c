@@ -31,6 +31,7 @@ void test_25();
 
 int main()
 {
+    printf("Running doubly linked list tests.\n");
     test_01();
     test_02();
     test_03();
@@ -62,6 +63,7 @@ int main()
 
 void test_01()
 {
+    printf("Running doubly linked list test 1\n");
     list_t *lst = list_create();
     assert(lst->back == NULL);
     assert(lst->front == NULL);
@@ -69,12 +71,14 @@ void test_01()
 
 void test_02()
 {
+    printf("Running doubly linked list test 2\n");
     list_node_t *node = list_node_create(2);
     assert(node->data == 2);
 }
 
 void test_03()
 {
+    printf("Running doubly linked list test 3\n");
     list_t *lst = list_create();
     list_node_t *node = list_node_create(0);
 
@@ -86,6 +90,7 @@ void test_03()
 
 void test_04()
 {
+    printf("Running doubly linked list test 4\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -104,6 +109,7 @@ void test_04()
 
 void test_05()
 {
+    printf("Running doubly linked list test 5\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -122,6 +128,7 @@ void test_05()
 
 void test_06()
 {
+    printf("Running doubly linked list test 6\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -142,6 +149,7 @@ void test_06()
 
 void test_07()
 {
+    printf("Running doubly linked list test 7\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
 
@@ -156,6 +164,7 @@ void test_07()
 
 void test_08()
 {
+    printf("Running doubly linked list test 8\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -178,6 +187,7 @@ void test_08()
 
 void test_09()
 {
+    printf("Running doubly linked list test 9\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -210,6 +220,7 @@ void test_09()
 
 void test_10()
 {
+    printf("Running doubly linked list test 10\n");
     list_t *lst = list_create();
     list_node_t *node = list_node_create(0);
 
@@ -221,6 +232,7 @@ void test_10()
 
 void test_11()
 {
+    printf("Running doubly linked list test 11\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -238,6 +250,7 @@ void test_11()
 
 void test_12()
 {
+    printf("Running doubly linked list test 12\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -257,6 +270,7 @@ void test_12()
 
 void test_13()
 {
+    printf("Running doubly linked list test 13\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -276,6 +290,7 @@ void test_13()
 
 void test_14()
 {
+    printf("Running doubly linked list test 14\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -295,6 +310,7 @@ void test_14()
 
 void test_15()
 {
+    printf("Running doubly linked list test 15\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -311,6 +327,7 @@ void test_15()
 
 void test_16()
 {
+    printf("Running doubly linked list test 16\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -334,6 +351,7 @@ void test_16()
 
 void test_17()
 {
+    printf("Running doubly linked list test 17\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -373,6 +391,7 @@ void test_17()
 
 void test_18()
 {
+    printf("Running doubly linked list test 18\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -393,6 +412,7 @@ void test_18()
 
 void test_19()
 {
+    printf("Running doubly linked list test 19\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -413,6 +433,7 @@ void test_19()
 
 void test_20()
 {
+    printf("Running doubly linked list test 20\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -433,6 +454,7 @@ void test_20()
 
 void test_21()
 {
+    printf("Running doubly linked list test 21\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -455,6 +477,7 @@ void test_21()
 
 void test_22()
 {
+    printf("Running doubly linked list test 22\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -477,6 +500,7 @@ void test_22()
 
 void test_23()
 {
+    printf("Running doubly linked list test 23\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -499,6 +523,7 @@ void test_23()
 
 void test_24()
 {
+    printf("Running doubly linked list test 24\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
@@ -521,6 +546,7 @@ void test_24()
 
 void test_25()
 {
+    printf("Running doubly linked list test 25\n");
     list_t *lst = list_create();
     list_node_t *node1 = list_node_create(0);
     list_node_t *node2 = list_node_create(1);
