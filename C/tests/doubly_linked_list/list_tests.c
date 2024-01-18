@@ -3,65 +3,7 @@
 #include <assert.h>
 #include "../../include/list.h"
 
-void test_01();
-void test_02();
-void test_03();
-void test_04();
-void test_05();
-void test_06();
-void test_07();
-void test_08();
-void test_09();
-void test_10();
-void test_11();
-void test_12();
-void test_13();
-void test_14();
-void test_15();
-void test_16();
-void test_17();
-void test_18();
-void test_19();
-void test_20();
-void test_21();
-void test_22();
-void test_23();
-void test_24();
-void test_25();
-
-int main()
-{
-    printf("Running doubly linked list tests.\n");
-    test_01();
-    test_02();
-    test_03();
-    test_04();
-    test_05();
-    test_06();
-    test_07();
-    test_08();
-    test_09();
-    test_10();
-    test_11();
-    test_12();
-    test_13();
-    test_14();
-    test_15();
-    test_16();
-    test_17();
-    test_18();
-    test_19();
-    test_20();
-    test_21();
-    test_22();
-    test_23();
-    test_24();
-    test_25();
-
-    return 0;
-}
-
-void test_01()
+void list_test_01()
 {
     printf("Running doubly linked list test 1\n");
     list_t *lst = list_create();
@@ -69,14 +11,14 @@ void test_01()
     assert(lst->front == NULL);
 }
 
-void test_02()
+void list_test_02()
 {
     printf("Running doubly linked list test 2\n");
     list_node_t *node = list_node_create(2);
     assert(node->data == 2);
 }
 
-void test_03()
+void list_test_03()
 {
     printf("Running doubly linked list test 3\n");
     list_t *lst = list_create();
@@ -86,9 +28,11 @@ void test_03()
     assert(lst->back == node);
     assert(lst->front == node);
     assert(lst->length == 1);
+
+    list_destroy(&lst);
 }
 
-void test_04()
+void list_test_04()
 {
     printf("Running doubly linked list test 4\n");
     list_t *lst = list_create();
@@ -105,9 +49,11 @@ void test_04()
     assert(lst->back->next == NULL);
     assert(lst->front->prev == NULL);
     assert(lst->length == 2);
+
+    list_destroy(&lst);
 }
 
-void test_05()
+void list_test_05()
 {
     printf("Running doubly linked list test 5\n");
     list_t *lst = list_create();
@@ -124,9 +70,11 @@ void test_05()
     assert(lst->back->next == NULL);
     assert(lst->front->prev == NULL);
     assert(lst->length == 2);
+
+    list_destroy(&lst);
 }
 
-void test_06()
+void list_test_06()
 {
     printf("Running doubly linked list test 6\n");
     list_t *lst = list_create();
@@ -145,9 +93,11 @@ void test_06()
     assert(lst->back->next == NULL);
     assert(lst->front->prev == NULL);
     assert(lst->length == 3);
+
+    list_destroy(&lst);
 }
 
-void test_07()
+void list_test_07()
 {
     printf("Running doubly linked list test 7\n");
     list_t *lst = list_create();
@@ -160,9 +110,11 @@ void test_07()
     assert(lst->back == NULL);
     assert(back_node == node1);
     assert(lst->length == 0);
+
+    list_destroy(&lst);
 }
 
-void test_08()
+void list_test_08()
 {
     printf("Running doubly linked list test 8\n");
     list_t *lst = list_create();
@@ -183,9 +135,11 @@ void test_08()
     assert(lst->back == NULL);
     assert(back_node2 == node1);
     assert(lst->length == 0);
+
+    list_destroy(&lst);
 }
 
-void test_09()
+void list_test_09()
 {
     printf("Running doubly linked list test 9\n");
     list_t *lst = list_create();
@@ -216,9 +170,11 @@ void test_09()
     assert(lst->back == NULL);
     assert(back_node3 == node1);
     assert(lst->length == 0);
+
+    list_destroy(&lst);
 }
 
-void test_10()
+void list_test_10()
 {
     printf("Running doubly linked list test 10\n");
     list_t *lst = list_create();
@@ -228,9 +184,11 @@ void test_10()
     assert(lst->back == node);
     assert(lst->front == node);
     assert(lst->length == 1);
+
+    list_destroy(&lst);
 }
 
-void test_11()
+void list_test_11()
 {
     printf("Running doubly linked list test 11\n");
     list_t *lst = list_create();
@@ -246,9 +204,11 @@ void test_11()
     assert(lst->back->prev == node2);
     assert(lst->back->next == NULL);
     assert(lst->length == 2);
+
+    list_destroy(&lst);
 }
 
-void test_12()
+void list_test_12()
 {
     printf("Running doubly linked list test 12\n");
     list_t *lst = list_create();
@@ -266,9 +226,11 @@ void test_12()
     assert(lst->back->prev == node2);
     assert(lst->back->next == NULL);
     assert(lst->length == 3);
+
+    list_destroy(&lst);
 }
 
-void test_13()
+void list_test_13()
 {
     printf("Running doubly linked list test 13\n");
     list_t *lst = list_create();
@@ -286,9 +248,11 @@ void test_13()
     assert(lst->back->prev == node1);
     assert(lst->back->next == NULL);
     assert(lst->length == 3);
+
+    list_destroy(&lst);
 }
 
-void test_14()
+void list_test_14()
 {
     printf("Running doubly linked list test 14\n");
     list_t *lst = list_create();
@@ -306,9 +270,11 @@ void test_14()
     assert(lst->back->prev == node2);
     assert(lst->back->next == NULL);
     assert(lst->length == 3);
+
+    list_destroy(&lst);
 }
 
-void test_15()
+void list_test_15()
 {
     printf("Running doubly linked list test 15\n");
     list_t *lst = list_create();
@@ -323,9 +289,11 @@ void test_15()
     assert(list_find(lst, 1) == node2);
     assert(list_find(lst, 2) == node3);
     assert(list_find(lst, 3) == NULL);
+
+    list_destroy(&lst);
 }
 
-void test_16()
+void list_test_16()
 {
     printf("Running doubly linked list test 16\n");
     list_t *lst = list_create();
@@ -347,9 +315,11 @@ void test_16()
     assert(list_at(lst, -8) == NULL);
     assert(list_at(lst, 7) == NULL);
     assert(list_at(lst, 10) == NULL);
+
+    list_destroy(&lst);
 }
 
-void test_17()
+void list_test_17()
 {
     printf("Running doubly linked list test 17\n");
     list_t *lst = list_create();
@@ -387,9 +357,11 @@ void test_17()
     assert(list_at(lst, -8) == NULL);
     assert(list_at(lst, 7) == NULL);
     assert(list_at(lst, 10) == NULL);
+
+    list_destroy(&lst);
 }
 
-void test_18()
+void list_test_18()
 {
     printf("Running doubly linked list test 18\n");
     list_t *lst = list_create();
@@ -408,9 +380,11 @@ void test_18()
     assert(lst->back == node3);
     assert(lst->back->next == NULL);
     assert(lst->length == 2);
+
+    list_destroy(&lst);
 }
 
-void test_19()
+void list_test_19()
 {
     printf("Running doubly linked list test 19\n");
     list_t *lst = list_create();
@@ -429,9 +403,11 @@ void test_19()
     assert(lst->back == node3);
     assert(lst->back->next == NULL);
     assert(lst->length == 2);
+
+    list_destroy(&lst);
 }
 
-void test_20()
+void list_test_20()
 {
     printf("Running doubly linked list test 20\n");
     list_t *lst = list_create();
@@ -450,9 +426,11 @@ void test_20()
     assert(lst->back == node2);
     assert(lst->back->next == NULL);
     assert(lst->length == 2);
+
+    list_destroy(&lst);
 }
 
-void test_21()
+void list_test_21()
 {
     printf("Running doubly linked list test 21\n");
     list_t *lst = list_create();
@@ -473,9 +451,11 @@ void test_21()
     assert(lst->back == node3);
     assert(lst->back->next == NULL);
     assert(lst->length == 1);
+
+    list_destroy(&lst);
 }
 
-void test_22()
+void list_test_22()
 {
     printf("Running doubly linked list test 22\n");
     list_t *lst = list_create();
@@ -496,9 +476,11 @@ void test_22()
     assert(lst->back == node2);
     assert(lst->back->next == NULL);
     assert(lst->length == 1);
+
+    list_destroy(&lst);
 }
 
-void test_23()
+void list_test_23()
 {
     printf("Running doubly linked list test 23\n");
     list_t *lst = list_create();
@@ -519,9 +501,11 @@ void test_23()
     assert(lst->back == node1);
     assert(lst->back->next == NULL);
     assert(lst->length == 1);
+
+    list_destroy(&lst);
 }
 
-void test_24()
+void list_test_24()
 {
     printf("Running doubly linked list test 24\n");
     list_t *lst = list_create();
@@ -542,9 +526,11 @@ void test_24()
     assert(lst->front == NULL);
     assert(lst->back == NULL);
     assert(lst->length == 0);
+
+    list_destroy(&lst);
 }
 
-void test_25()
+void list_test_25()
 {
     printf("Running doubly linked list test 25\n");
     list_t *lst = list_create();
@@ -563,6 +549,6 @@ void test_25()
     list_push_front(lst, node5);
     list_push_front(lst, node6);
     list_push_front(lst, node7);
-    
+
     list_destroy(&lst);
 }
